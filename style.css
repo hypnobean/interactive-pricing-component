@@ -227,6 +227,10 @@ input[type="range"]::-moz-range-thumb:active {
     transition: all 0.2s ease-in-out;
 }
 
+.billing > label:nth-child(3) {
+    display: flex;
+}
+
 
 
 input[type="radio"] {
@@ -268,6 +272,10 @@ input[type="radio"]:checked {
     border-radius: 20px;
 }
 
+.discount-sm {
+    display: none;
+}
+
 hr {
     border: none;
     height: 1px;
@@ -304,10 +312,53 @@ input[type="button"]:hover {
 
 @media screen and (max-width: 879px) {
 
+    form > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        padding: 1.75rem 1.75rem 1.5rem 1.75rem;
+    }
+
+    form > div > span {
+        order: 1;
+    }
+
+    input[type='range'] {
+        order: 2;
+        margin: 2rem 0;
+    }
+
+    form > div:nth-child(1) > div:nth-child(2) {
+        order: 3;
+    }
+
+    .billing {
+        order: 4;
+        font-size: 12px;
+        gap: 0;
+        width: 100%;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
     form > div:nth-child(3) {
         text-align: center;
         flex-direction: column;
+        height: 100%;
+        padding: 1.5rem 1.75rem 1.75rem 1.75rem;
+        row-gap: 1rem;
     }
 
+    .discount {
+        padding: 0.1rem 0.25rem;
+        margin: 0 0.15rem;
+    }
 
+    .discount-sm {
+        display: block;
+    }
+
+    .discount-lg {
+        display: none;
+    }
+    
 }
